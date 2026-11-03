@@ -295,3 +295,14 @@ body.nav-open{overflow:clip}
 .legal li{position:relative;padding-left:var(--s-5);font-size:16px}
 .legal li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:1px;background:var(--c-amber-deep)}
 .legal a{border-bottom:1px solid var(--c-amber)}
+
+/* ---------- Result pair ---------- */
+.pair{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--col-gap);align-items:start}
+.pair__item{margin:0}
+.pair__item img{width:100%;aspect-ratio:1.2;object-fit:cover;border-radius:4px}
+.pair__item:nth-child(2) img{aspect-ratio:.9}
+.pair__item figcaption{margin-top:var(--s-3);font-size:13px;color:var(--c-muted);max-width:42ch}
+@media (max-width:1080px){
+  .pair{grid-template-columns:minmax(0,1fr)}
+  .pair__item img,.pair__item:nth-child(2) img{aspect-ratio:1.5}
+}
